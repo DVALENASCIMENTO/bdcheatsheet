@@ -1,0 +1,111 @@
+[
+  {
+    "number": 1,
+    "emoji": "🗄️",
+    "title": "O que é Banco de Dados?",
+    "color": "blue",
+    "description": "Banco de dados é um sistema estruturado para armazenar, organizar, gerenciar e recuperar grandes volumes de dados de forma eficiente e segura. Eles permitem o acesso rápido e confiável à informação, suportando operações como inserção, consulta, atualização e exclusão. Bancos de dados são essenciais para aplicações modernas, garantindo integridade, consistência e disponibilidade dos dados."
+  },
+  {
+    "number": 2,
+    "emoji": "🔢",
+    "title": "Tipos de Banco de Dados",
+    "color": "green",
+    "types": [
+      {
+        "name": "Relacional (SQL)",
+        "description": "Este modelo organiza os dados em tabelas compostas por linhas (registros) e colunas (atributos). Cada tabela possui uma chave primária que identifica unicamente cada registro. A manipulação dos dados é feita com a linguagem SQL (Structured Query Language), que permite consultas complexas, relacionamentos entre tabelas e garantias de integridade referencial. É ideal para dados estruturados e transações que exigem alta consistência.",
+        "exemplos": ["MySQL", "PostgreSQL", "SQLite", "SQL Server"]
+      },
+      {
+        "name": "Não Relacional (NoSQL)",
+        "description": "Projetados para oferecer maior flexibilidade e escalabilidade, bancos NoSQL armazenam dados em formatos variados, como documentos JSON/BSON, pares chave-valor, colunas largas ou grafos. São indicados para dados semi-estruturados ou não estruturados, além de sistemas que demandam alta velocidade e disponibilidade. Diferentes tipos de NoSQL atendem a necessidades específicas, como consultas rápidas, análise de grafos ou armazenamento em cache.",
+        "exemplos": ["MongoDB", "Redis", "Cassandra", "Neo4j"]
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "emoji": "📋",
+    "title": "Conceitos Básicos",
+    "color": "orange",
+    "concepts": [
+      {
+        "term": "Tabela",
+        "definition": "No modelo relacional, a tabela é a estrutura fundamental que armazena os dados em linhas (registros) e colunas (campos). Cada coluna define um tipo de dado e regras específicas, e cada linha representa uma entidade ou objeto com seus valores."
+      },
+      {
+        "term": "Documento",
+        "definition": "Em bancos NoSQL baseados em documentos, como MongoDB, um documento é uma estrutura semelhante a JSON ou BSON que contém dados organizados em pares chave-valor, podendo ser aninhados para representar estruturas complexas."
+      },
+      {
+        "term": "Chave Primária",
+        "definition": "É um campo ou conjunto de campos que identificam unicamente cada registro em uma tabela relacional, garantindo que não existam duplicatas e facilitando buscas e relacionamentos."
+      },
+      {
+        "term": "Consulta (Query)",
+        "definition": "Comando usado para buscar, inserir, atualizar ou deletar dados no banco. Consultas podem variar de simples seleções a complexas junções e filtros, dependendo da linguagem e do banco."
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "emoji": "💾",
+    "title": "Exemplo básico em SQL",
+    "color": "purple",
+    "example": "CREATE TABLE usuarios (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  nome VARCHAR(100) NOT NULL,\n  email VARCHAR(100) UNIQUE NOT NULL\n);\n\nINSERT INTO usuarios (nome, email) VALUES ('João', 'joao@email.com');\n\nSELECT * FROM usuarios;\n\n-- Explicação:\n-- CREATE TABLE define a tabela 'usuarios' com colunas e restrições.\n-- id é a chave primária auto-incrementada.\n-- nome e email são campos obrigatórios.\n-- INSERT adiciona um registro.\n-- SELECT recupera todos os registros da tabela."
+  },
+  {
+    "number": 5,
+    "emoji": "📦",
+    "title": "Exemplo básico em MongoDB",
+    "color": "red",
+    "example": "db.usuarios.insertOne({ nome: 'Maria', email: 'maria@email.com' });\n\n// Insere um documento JSON na coleção 'usuarios'.\n\ndb.usuarios.find({});\n// Retorna todos os documentos da coleção.\n\n// Explicação:\n// MongoDB usa coleções (semelhante a tabelas) e documentos (semelhante a linhas).\n// A estrutura é flexível, permitindo campos variáveis entre documentos."
+  },
+  {
+    "number": 6,
+    "emoji": "🔐",
+    "title": "Transações e Integridade",
+    "color": "teal",
+    "description": "Transações garantem que um conjunto de operações no banco de dados seja executado completamente ou não seja aplicado, mantendo a integridade dos dados. Isso é fundamental para evitar corrupção e inconsistências. Características das transações são resumidas no acrônimo ACID:\n- Atomicidade: tudo ou nada.\n- Consistência: o banco passa de um estado válido a outro.\n- Isolamento: operações concorrentes não interferem.\n- Durabilidade: mudanças persistem após confirmação."
+  },
+  {
+    "number": 7,
+    "emoji": "⚡",
+    "title": "Índices",
+    "color": "yellow",
+    "description": "Índices são estruturas especiais que o banco cria para acelerar a busca por dados, como um índice em um livro. Eles funcionam armazenando referências ordenadas para dados em uma ou mais colunas, permitindo que consultas filtrem rapidamente os registros sem precisar escanear toda a tabela. Porém, índices também ocupam espaço e podem impactar a velocidade de inserção e atualização."
+  },
+  {
+    "number": 8,
+    "emoji": "🛠️",
+    "title": "Ferramentas populares",
+    "color": "cyan",
+    "tools": [
+      "phpMyAdmin (MySQL): Interface web para gerenciar bancos MySQL com facilidade, ideal para administradores e desenvolvedores iniciantes.",
+      "MongoDB Compass: Interface gráfica oficial do MongoDB, para explorar dados, construir consultas e visualizar estatísticas.",
+      "pgAdmin (PostgreSQL): Ferramenta gráfica completa para administração e desenvolvimento com PostgreSQL.",
+      "Redis CLI: Interface de linha de comando para interação rápida com bancos Redis, focados em chave-valor e cache.",
+      "DBeaver (multi-banco): Plataforma universal para gerenciar diversos bancos de dados com interface única e suporte a SQL e NoSQL."
+    ]
+  },
+  {
+    "number": 9,
+    "emoji": "🌐",
+    "title": "Como conectar em um banco de dados",
+    "color": "gray",
+    "description": "Para interagir com bancos de dados, utilizamos bibliotecas específicas para cada linguagem, chamadas drivers ou ORMs (Object-Relational Mappers). Por exemplo, em Node.js podemos usar:\n- mysql2 para MySQL;\n- mongoose para MongoDB;\n- pg para PostgreSQL.\nEstas bibliotecas facilitam a conexão, execução de comandos, tratamento de erros e manipulação dos resultados de forma programática."
+  },
+  {
+    "number": 10,
+    "emoji": "📚",
+    "title": "Recursos para aprender mais",
+    "color": "gray",
+    "resources": [
+      "Documentação oficial dos bancos de dados (ex: https://dev.mysql.com/doc/, https://docs.mongodb.com/).",
+      "Cursos online em plataformas como Udemy, Coursera, Alura, YouTube, que ensinam desde o básico até tópicos avançados.",
+      "Livros renomados como 'Database System Concepts' de Silberschatz, 'SQL For Dummies' e 'MongoDB: The Definitive Guide'.",
+      "Comunidades e fóruns como Stack Overflow, Reddit, e grupos especializados em bancos de dados para tirar dúvidas e acompanhar novidades."
+    ]
+  }
+]
