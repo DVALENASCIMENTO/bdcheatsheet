@@ -4,22 +4,31 @@
     "emoji": "🗄️",
     "title": "O que é Banco de Dados?",
     "color": "blue",
-    "description": "Banco de dados é um sistema especializado que permite armazenar, organizar e recuperar informações de maneira eficiente e segura. Ele é projetado para lidar com grandes volumes de dados, assegurando a integridade, consistência e disponibilidade das informações. Além disso, possibilita operações como inserção, consulta, atualização e exclusão (CRUD). Sistemas de banco de dados são essenciais para aplicações modernas, desde redes sociais até sistemas financeiros e de saúde, garantindo que os dados sejam facilmente acessíveis e protegidos contra falhas ou acessos indevidos."
+    "commands": [
+      {
+        "cmd": "Definição",
+        "desc": "Banco de dados é um sistema especializado para armazenar, organizar e recuperar informações com eficiência e segurança. Ele é fundamental para aplicações modernas, permitindo a persistência de dados e a execução de operações como inserção, consulta, atualização e exclusão (CRUD)."
+      },
+      {
+        "cmd": "Importância",
+        "desc": "Garante integridade e disponibilidade dos dados em sistemas críticos, como bancos, hospitais e redes sociais, além de proteger contra falhas e acessos não autorizados."
+      }
+    ]
   },
   {
     "number": 2,
     "emoji": "🔢",
     "title": "Tipos de Banco de Dados",
     "color": "green",
-    "types": [
+    "commands": [
       {
-        "name": "Relacional (SQL)",
-        "description": "Os bancos de dados relacionais organizam informações em tabelas compostas por linhas (também chamadas de registros) e colunas (atributos ou campos). As tabelas podem se relacionar entre si, permitindo a modelagem de sistemas complexos. O SQL (Structured Query Language) é a linguagem padrão para manipulação desses dados, oferecendo comandos para consultar, inserir, atualizar e excluir registros. Esse modelo é ideal quando há necessidade de integridade e consistência elevadas, como em sistemas bancários ou ERPs.",
+        "cmd": "Relacional (SQL)",
+        "desc": "Organiza os dados em tabelas com linhas e colunas. Utiliza SQL como linguagem padrão para manipular dados, garantindo integridade com constraints e relacionamentos bem definidos.",
         "exemplos": ["MySQL", "PostgreSQL", "SQLite", "SQL Server"]
       },
       {
-        "name": "Não Relacional (NoSQL)",
-        "description": "Bancos de dados NoSQL foram desenvolvidos para atender às demandas de aplicações modernas que exigem escalabilidade, flexibilidade e desempenho. Eles não seguem o modelo relacional e podem armazenar dados de diferentes formas: documentos (JSON, BSON), chave-valor, colunas amplas ou grafos. São ideais para lidar com dados semi-estruturados ou não estruturados, como perfis de usuários, catálogos de produtos ou redes sociais, além de aplicações que precisam de alta disponibilidade e resposta rápida.",
+        "cmd": "Não Relacional (NoSQL)",
+        "desc": "Armazena dados em formatos variados como documentos, chave-valor, colunas ou grafos. Foco em escalabilidade, desempenho e flexibilidade para lidar com grandes volumes de dados semi ou não estruturados.",
         "exemplos": ["MongoDB", "Redis", "Cassandra", "Neo4j"]
       }
     ]
@@ -29,22 +38,22 @@
     "emoji": "📋",
     "title": "Conceitos Básicos",
     "color": "orange",
-    "concepts": [
+    "commands": [
       {
-        "term": "Tabela",
-        "definition": "Estrutura fundamental dos bancos relacionais, onde os dados são organizados em linhas (registros) e colunas (atributos). Cada coluna define um tipo de dado, como texto, número ou data, e cada linha representa uma instância de entidade, como um cliente ou pedido."
+        "cmd": "Tabela",
+        "desc": "Estrutura fundamental em bancos relacionais. Organiza dados em registros (linhas) e atributos (colunas), cada um representando uma entidade e suas características."
       },
       {
-        "term": "Documento",
-        "definition": "Estrutura usada em bancos NoSQL baseados em documentos. É semelhante a um objeto JSON, onde os dados são armazenados em pares chave-valor. Permite a modelagem de informações complexas com flexibilidade, como listas aninhadas e objetos compostos."
+        "cmd": "Documento",
+        "desc": "Modelo usado em bancos NoSQL baseados em documentos. Estrutura flexível, semelhante a objetos JSON, ideal para armazenar informações complexas e aninhadas."
       },
       {
-        "term": "Chave Primária",
-        "definition": "Campo que identifica de maneira única cada registro em uma tabela relacional. Evita a duplicação de registros e facilita a criação de relacionamentos entre tabelas através de chaves estrangeiras."
+        "cmd": "Chave Primária",
+        "desc": "Campo que identifica unicamente cada registro em uma tabela, essencial para evitar duplicações e criar relações entre tabelas através de chaves estrangeiras."
       },
       {
-        "term": "Consulta (Query)",
-        "definition": "Comando que permite buscar, inserir, atualizar ou excluir dados no banco. Pode ser simples, como selecionar todos os registros, ou complexa, envolvendo múltiplas tabelas e filtros específicos."
+        "cmd": "Consulta (Query)",
+        "desc": "Instrução que permite buscar, inserir, alterar ou excluir dados no banco. Pode variar de simples consultas a complexas junções e agregações de múltiplas tabelas."
       }
     ]
   },
@@ -53,42 +62,91 @@
     "emoji": "💾",
     "title": "Exemplo básico em SQL",
     "color": "purple",
-    "example": "CREATE TABLE usuarios (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  nome VARCHAR(100) NOT NULL,\n  email VARCHAR(100) UNIQUE NOT NULL\n);\n\nINSERT INTO usuarios (nome, email) VALUES ('João', 'joao@email.com');\n\nSELECT * FROM usuarios;",
-    "explanation": "O comando CREATE TABLE define uma nova tabela chamada 'usuarios' com três colunas: id, nome e email. O campo id é configurado como chave primária e auto-incrementa automaticamente a cada inserção. Os campos nome e email são obrigatórios (NOT NULL), sendo o email também único (UNIQUE). O comando INSERT adiciona um novo registro e o SELECT recupera todos os registros armazenados."
+    "commands": [
+      {
+        "cmd": "SQL Exemplo",
+        "desc": "```sql\nCREATE TABLE usuarios (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  nome VARCHAR(100) NOT NULL,\n  email VARCHAR(100) UNIQUE NOT NULL\n);\n\nINSERT INTO usuarios (nome, email) VALUES ('João', 'joao@email.com');\n\nSELECT * FROM usuarios;\n```"
+      },
+      {
+        "cmd": "Explicação",
+        "desc": "O comando `CREATE TABLE` cria a tabela 'usuarios' com colunas: id (chave primária), nome e email. `INSERT` adiciona um registro, e `SELECT` recupera todos os dados. A cláusula `UNIQUE` impede emails repetidos e `AUTO_INCREMENT` gera automaticamente valores únicos para id."
+      }
+    ]
   },
   {
     "number": 5,
     "emoji": "📦",
     "title": "Exemplo básico em MongoDB",
     "color": "red",
-    "example": "db.usuarios.insertOne({ nome: 'Maria', email: 'maria@email.com' });\n\ndb.usuarios.find({});",
-    "explanation": "Em MongoDB, utilizamos coleções em vez de tabelas e documentos em vez de registros. O comando insertOne adiciona um novo documento à coleção 'usuarios', contendo as chaves nome e email. Já o comando find busca e retorna todos os documentos existentes na coleção. MongoDB permite esquemas flexíveis, aceitando documentos com diferentes estruturas na mesma coleção."
+    "commands": [
+      {
+        "cmd": "MongoDB Exemplo",
+        "desc": "```js\ndb.usuarios.insertOne({ nome: 'Maria', email: 'maria@email.com' });\ndb.usuarios.find({});\n```"
+      },
+      {
+        "cmd": "Explicação",
+        "desc": "Em MongoDB, coleções armazenam documentos JSON. O comando `insertOne` adiciona um documento à coleção 'usuarios'. `find` recupera todos os documentos. MongoDB é schema-less, permitindo documentos com diferentes estruturas na mesma coleção."
+      }
+    ]
   },
   {
     "number": 6,
     "emoji": "🔐",
     "title": "Transações e Integridade",
     "color": "teal",
-    "description": "Transações garantem que um conjunto de operações seja executado integralmente ou não seja executado, preservando a integridade dos dados. O conceito ACID resume as propriedades essenciais:\n- **Atomicidade**: todas as operações são concluídas ou nenhuma.\n- **Consistência**: o banco evolui apenas entre estados válidos.\n- **Isolamento**: operações concorrentes não interferem entre si.\n- **Durabilidade**: após a confirmação, os dados são preservados, mesmo em caso de falhas."
+    "commands": [
+      {
+        "cmd": "Transações",
+        "desc": "Conjunto de operações que devem ser executadas como uma unidade atômica: ou todas são concluídas, ou nenhuma. Isso garante que o banco mantenha consistência, mesmo em falhas."
+      },
+      {
+        "cmd": "ACID",
+        "desc": "**Atomicidade**: tudo ou nada; **Consistência**: garante validade dos dados; **Isolamento**: operações simultâneas não interferem; **Durabilidade**: dados persistem após confirmação."
+      }
+    ]
   },
   {
     "number": 7,
     "emoji": "⚡",
     "title": "Índices",
     "color": "yellow",
-    "description": "Índices são estruturas criadas para melhorar a velocidade das consultas em bancos de dados. Funcionam como índices em livros, permitindo localizar rapidamente informações sem a necessidade de varrer todos os registros. Contudo, embora acelerem consultas, os índices consomem espaço adicional e podem impactar negativamente operações de inserção, atualização e deleção, já que essas exigem a atualização dos índices relacionados."
+    "commands": [
+      {
+        "cmd": "O que são",
+        "desc": "Estruturas auxiliares que aceleram consultas, permitindo localizar rapidamente dados sem escanear toda a tabela."
+      },
+      {
+        "cmd": "Prós e Contras",
+        "desc": "Melhoram desempenho de leitura, mas aumentam o custo de armazenamento e podem impactar negativamente operações de escrita, que precisam atualizar os índices."
+      }
+    ]
   },
   {
     "number": 8,
     "emoji": "🛠️",
-    "title": "Ferramentas populares",
+    "title": "Ferramentas Populares",
     "color": "cyan",
-    "tools": [
-      "phpMyAdmin: Interface web intuitiva para administrar bancos MySQL, permitindo consultas, backups e visualização de dados.",
-      "MongoDB Compass: Ferramenta gráfica oficial para explorar, consultar e analisar bancos MongoDB, ideal para iniciantes e especialistas.",
-      "pgAdmin: Completa interface gráfica para gestão do PostgreSQL, oferecendo recursos de modelagem, monitoramento e execução de scripts SQL.",
-      "Redis CLI: Ferramenta de linha de comando para interação rápida e direta com o Redis, ideal para operações de chave-valor e cache.",
-      "DBeaver: Plataforma universal para administração de múltiplos bancos de dados, com suporte a SQL e NoSQL em uma interface unificada."
+    "commands": [
+      {
+        "cmd": "phpMyAdmin",
+        "desc": "Interface web intuitiva para gerenciar bancos MySQL, realizando consultas, backups e visualização de dados de forma gráfica."
+      },
+      {
+        "cmd": "MongoDB Compass",
+        "desc": "Ferramenta oficial do MongoDB com interface gráfica para explorar coleções, executar queries e analisar o desempenho."
+      },
+      {
+        "cmd": "pgAdmin",
+        "desc": "Completa interface para PostgreSQL com recursos de modelagem de dados, execução de scripts SQL e monitoramento de desempenho."
+      },
+      {
+        "cmd": "Redis CLI",
+        "desc": "Ferramenta de linha de comando para interação com Redis, ideal para operações rápidas de cache e armazenamento chave-valor."
+      },
+      {
+        "cmd": "DBeaver",
+        "desc": "Plataforma universal para administração de múltiplos bancos SQL e NoSQL, com interface unificada e extensível."
+      }
     ]
   },
   {
@@ -96,18 +154,39 @@
     "emoji": "🌐",
     "title": "Como conectar em um banco de dados",
     "color": "gray",
-    "description": "A conexão com bancos de dados é realizada por meio de bibliotecas específicas, denominadas drivers ou ORMs (Object-Relational Mappers). Essas ferramentas facilitam a execução de comandos, a manipulação de dados e o tratamento de erros de forma programática. Por exemplo:\n- **mysql2**: driver para conexão com MySQL em Node.js.\n- **mongoose**: ORM para interação com bancos MongoDB, oferecendo validação, modelagem e hooks.\n- **pg**: driver oficial para PostgreSQL, simples e eficiente. \nCada linguagem possui bibliotecas específicas para interagir com diferentes tipos de bancos de dados."
+    "commands": [
+      {
+        "cmd": "Drivers e ORMs",
+        "desc": "Drivers permitem a comunicação direta com o banco, enquanto ORMs abstraem operações SQL para objetos e métodos, facilitando o desenvolvimento."
+      },
+      {
+        "cmd": "Exemplos",
+        "desc": "`mysql2` para MySQL em Node.js; `mongoose` para MongoDB com validação e modelagem; `pg` para PostgreSQL com suporte a consultas parametrizadas."
+      }
+    ]
   },
   {
     "number": 10,
     "emoji": "📚",
     "title": "Recursos para aprender mais",
     "color": "gray",
-    "resources": [
-      "Documentação oficial de cada banco de dados, como MySQL (https://dev.mysql.com/doc/) e MongoDB (https://www.mongodb.com/docs/).",
-      "Plataformas de cursos online como Udemy, Coursera, Alura e YouTube, que oferecem desde introduções até tópicos avançados.",
-      "Livros clássicos como 'Database System Concepts' de Silberschatz, 'SQL For Dummies' para iniciantes e 'MongoDB: The Definitive Guide' para quem quer se aprofundar.",
-      "Comunidades e fóruns como Stack Overflow, Reddit, e grupos especializados, ótimos para tirar dúvidas, compartilhar experiências e acompanhar as novidades da área."
+    "commands": [
+      {
+        "cmd": "Documentação oficial",
+        "desc": "Referência primária e mais atualizada. Ex.: MySQL (https://dev.mysql.com/doc/) e MongoDB (https://www.mongodb.com/docs/)."
+      },
+      {
+        "cmd": "Plataformas de cursos",
+        "desc": "Udemy, Coursera, Alura e YouTube oferecem cursos desde introdução até tópicos avançados, com aulas práticas e teóricas."
+      },
+      {
+        "cmd": "Livros",
+        "desc": "Obras fundamentais: 'Database System Concepts' (Silberschatz), 'SQL For Dummies' para iniciantes e 'MongoDB: The Definitive Guide' para especialistas."
+      },
+      {
+        "cmd": "Comunidades",
+        "desc": "Participe de fóruns como Stack Overflow e grupos no Reddit para tirar dúvidas, compartilhar experiências e acompanhar tendências da área."
+      }
     ]
   }
 ]
