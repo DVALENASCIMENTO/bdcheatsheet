@@ -7,11 +7,13 @@
     "commands": [
       {
         "cmd": "Definição",
-        "desc": "Banco de dados é um sistema especializado para armazenar, organizar e recuperar informações com eficiência e segurança. Ele é fundamental para aplicações modernas, permitindo a persistência de dados e a execução de operações como inserção, consulta, atualização e exclusão (CRUD)."
+        "desc": "Banco de dados é um sistema especializado para armazenar, organizar e recuperar informações com eficiência e segurança. É essencial para aplicações modernas, oferecendo suporte para transações, integridade e acesso rápido a dados persistentes.",
+        "link": "https://developer.mozilla.org/pt-BR/docs/Glossary/Database"
       },
       {
         "cmd": "Importância",
-        "desc": "Garante integridade e disponibilidade dos dados em sistemas críticos, como bancos, hospitais e redes sociais, além de proteger contra falhas e acessos não autorizados."
+        "desc": "São usados em praticamente todas as áreas: sistemas bancários, hospitalares, logísticos, redes sociais e muito mais. Garantem integridade, consistência e disponibilidade dos dados, mesmo em situações de falha ou acesso simultâneo.",
+        "link": "https://www.ibm.com/cloud/learn/database"
       }
     ]
   },
@@ -23,13 +25,15 @@
     "commands": [
       {
         "cmd": "Relacional (SQL)",
-        "desc": "Organiza os dados em tabelas com linhas e colunas. Utiliza SQL como linguagem padrão para manipular dados, garantindo integridade com constraints e relacionamentos bem definidos.",
-        "exemplos": ["MySQL", "PostgreSQL", "SQLite", "SQL Server"]
+        "desc": "Organiza os dados em tabelas com linhas e colunas. Utiliza a linguagem SQL para realizar operações de forma estruturada, com suporte a integridade referencial e normalização.",
+        "exemplos": ["MySQL", "PostgreSQL", "SQLite", "SQL Server"],
+        "link": "https://dvalenascimento.github.io/sqlcheatsheet/"
       },
       {
         "cmd": "Não Relacional (NoSQL)",
-        "desc": "Armazena dados em formatos variados como documentos, chave-valor, colunas ou grafos. Foco em escalabilidade, desempenho e flexibilidade para lidar com grandes volumes de dados semi ou não estruturados.",
-        "exemplos": ["MongoDB", "Redis", "Cassandra", "Neo4j"]
+        "desc": "Usam modelos flexíveis como documentos, chave-valor, colunar ou grafos. São ideais para dados semi-estruturados e aplicações que exigem escalabilidade horizontal.",
+        "exemplos": ["MongoDB", "Redis", "Cassandra", "Neo4j"],
+        "link": "https://www.mongodb.com/nosql-explained"
       }
     ]
   },
@@ -41,19 +45,23 @@
     "commands": [
       {
         "cmd": "Tabela",
-        "desc": "Estrutura fundamental em bancos relacionais. Organiza dados em registros (linhas) e atributos (colunas), cada um representando uma entidade e suas características."
+        "desc": "Principal estrutura dos bancos relacionais. Cada linha representa um registro e cada coluna, um atributo da entidade.",
+        "link": "https://www.geeksforgeeks.org/database-tables/"
       },
       {
         "cmd": "Documento",
-        "desc": "Modelo usado em bancos NoSQL baseados em documentos. Estrutura flexível, semelhante a objetos JSON, ideal para armazenar informações complexas e aninhadas."
+        "desc": "Estrutura usada em bancos NoSQL baseados em documentos, como JSON. Permite flexibilidade e aninhamento de dados.",
+        "link": "https://www.mongodb.com/docs/manual/core/document/"
       },
       {
         "cmd": "Chave Primária",
-        "desc": "Campo que identifica unicamente cada registro em uma tabela, essencial para evitar duplicações e criar relações entre tabelas através de chaves estrangeiras."
+        "desc": "Identificador único para cada linha de uma tabela. Garante unicidade e serve de base para relacionamentos entre tabelas.",
+        "link": "https://www.w3schools.com/sql/sql_primarykey.asp"
       },
       {
         "cmd": "Consulta (Query)",
-        "desc": "Instrução que permite buscar, inserir, alterar ou excluir dados no banco. Pode variar de simples consultas a complexas junções e agregações de múltiplas tabelas."
+        "desc": "Comando usado para buscar, inserir, atualizar ou excluir dados. Consultas podem incluir filtros, ordenações e junções complexas.",
+        "link": "https://sqlzoo.net/"
       }
     ]
   },
@@ -69,7 +77,8 @@
       },
       {
         "cmd": "Explicação",
-        "desc": "O comando `CREATE TABLE` cria a tabela 'usuarios' com colunas: id (chave primária), nome e email. `INSERT` adiciona um registro, e `SELECT` recupera todos os dados. A cláusula `UNIQUE` impede emails repetidos e `AUTO_INCREMENT` gera automaticamente valores únicos para id."
+        "desc": "Criamos uma tabela com três colunas. O campo 'id' é auto incrementado e atua como chave primária. Inserimos um usuário e, por fim, consultamos todos os dados da tabela.",
+        "link": "https://dvalenascimento.github.io/sqlcheatsheet/"
       }
     ]
   },
@@ -85,7 +94,8 @@
       },
       {
         "cmd": "Explicação",
-        "desc": "Em MongoDB, coleções armazenam documentos JSON. O comando `insertOne` adiciona um documento à coleção 'usuarios'. `find` recupera todos os documentos. MongoDB é schema-less, permitindo documentos com diferentes estruturas na mesma coleção."
+        "desc": "MongoDB trabalha com coleções de documentos. `insertOne` adiciona um novo documento. `find` retorna os documentos existentes. É ideal para dados com estrutura variável.",
+        "link": "https://dvalenascimento.github.io/mongodbcheatsheet/"
       }
     ]
   },
@@ -97,11 +107,13 @@
     "commands": [
       {
         "cmd": "Transações",
-        "desc": "Conjunto de operações que devem ser executadas como uma unidade atômica: ou todas são concluídas, ou nenhuma. Isso garante que o banco mantenha consistência, mesmo em falhas."
+        "desc": "Agrupam múltiplas operações que devem ocorrer juntas. Se uma falhar, todas são revertidas. Isso é essencial para manter os dados corretos em sistemas críticos.",
+        "link": "https://www.postgresql.org/docs/current/tutorial-transactions.html"
       },
       {
         "cmd": "ACID",
-        "desc": "**Atomicidade**: tudo ou nada; **Consistência**: garante validade dos dados; **Isolamento**: operações simultâneas não interferem; **Durabilidade**: dados persistem após confirmação."
+        "desc": "**Atomicidade**: operação completa ou nada. **Consistência**: sistema sempre em estado válido. **Isolamento**: transações não interferem. **Durabilidade**: dados persistem após sucesso.",
+        "link": "https://www.ibm.com/topics/acid"
       }
     ]
   },
@@ -113,11 +125,13 @@
     "commands": [
       {
         "cmd": "O que são",
-        "desc": "Estruturas auxiliares que aceleram consultas, permitindo localizar rapidamente dados sem escanear toda a tabela."
+        "desc": "Índices são estruturas como árvores B que permitem buscar dados com muito mais velocidade, evitando leitura sequencial da tabela.",
+        "link": "https://use-the-index-luke.com/"
       },
       {
         "cmd": "Prós e Contras",
-        "desc": "Melhoram desempenho de leitura, mas aumentam o custo de armazenamento e podem impactar negativamente operações de escrita, que precisam atualizar os índices."
+        "desc": "Melhoram drasticamente a leitura, mas consomem mais espaço e tornam operações de escrita mais lentas, pois os índices precisam ser atualizados.",
+        "link": "https://www.geeksforgeeks.org/indexing-in-databases-set-1/"
       }
     ]
   },
@@ -129,23 +143,28 @@
     "commands": [
       {
         "cmd": "phpMyAdmin",
-        "desc": "Interface web intuitiva para gerenciar bancos MySQL, realizando consultas, backups e visualização de dados de forma gráfica."
+        "desc": "Interface web para MySQL. Permite administrar banco, executar queries e gerenciar tabelas sem usar terminal.",
+        "link": "https://www.phpmyadmin.net/"
       },
       {
         "cmd": "MongoDB Compass",
-        "desc": "Ferramenta oficial do MongoDB com interface gráfica para explorar coleções, executar queries e analisar o desempenho."
+        "desc": "Interface gráfica para o MongoDB com visualização de dados, criação de índices e execução de queries.",
+        "link": "https://www.mongodb.com/products/compass"
       },
       {
         "cmd": "pgAdmin",
-        "desc": "Completa interface para PostgreSQL com recursos de modelagem de dados, execução de scripts SQL e monitoramento de desempenho."
+        "desc": "Ambiente visual completo para PostgreSQL. Útil para administração, desenvolvimento e análise de desempenho.",
+        "link": "https://www.pgadmin.org/"
       },
       {
         "cmd": "Redis CLI",
-        "desc": "Ferramenta de linha de comando para interação com Redis, ideal para operações rápidas de cache e armazenamento chave-valor."
+        "desc": "Interface de linha de comando do Redis. Ideal para executar comandos simples, testes e gerenciamento de chaves.",
+        "link": "https://redis.io/docs/ui/cli/"
       },
       {
         "cmd": "DBeaver",
-        "desc": "Plataforma universal para administração de múltiplos bancos SQL e NoSQL, com interface unificada e extensível."
+        "desc": "Cliente universal para bancos SQL e NoSQL. Suporta modelagem, exportação de dados, SQL Editor e múltiplos bancos.",
+        "link": "https://dbeaver.io/"
       }
     ]
   },
@@ -157,11 +176,13 @@
     "commands": [
       {
         "cmd": "Drivers e ORMs",
-        "desc": "Drivers permitem a comunicação direta com o banco, enquanto ORMs abstraem operações SQL para objetos e métodos, facilitando o desenvolvimento."
+        "desc": "Drivers conectam diretamente a linguagem de programação ao banco. ORMs facilitam essa interação representando tabelas como objetos de código.",
+        "link": "https://sequelize.org/ (exemplo de ORM em Node.js)"
       },
       {
         "cmd": "Exemplos",
-        "desc": "`mysql2` para MySQL em Node.js; `mongoose` para MongoDB com validação e modelagem; `pg` para PostgreSQL com suporte a consultas parametrizadas."
+        "desc": "`mysql2` (Node.js), `mongoose` (MongoDB), `pg` (PostgreSQL). Todos ajudam na integração e abstração das queries.",
+        "link": "https://mongoosejs.com/"
       }
     ]
   },
@@ -173,19 +194,23 @@
     "commands": [
       {
         "cmd": "Documentação oficial",
-        "desc": "Referência primária e mais atualizada. Ex.: MySQL (https://dev.mysql.com/doc/) e MongoDB (https://www.mongodb.com/docs/)."
+        "desc": "Sempre atualizada, com exemplos e boas práticas. MySQL: https://dev.mysql.com/doc/. MongoDB: https://www.mongodb.com/docs/",
+        "link": "https://dev.mysql.com/doc/"
       },
       {
         "cmd": "Plataformas de cursos",
-        "desc": "Udemy, Coursera, Alura e YouTube oferecem cursos desde introdução até tópicos avançados, com aulas práticas e teóricas."
+        "desc": "Udemy, Alura, Coursera e YouTube têm cursos de nível básico a avançado com teoria e prática.",
+        "link": "https://www.udemy.com/topic/database/"
       },
       {
         "cmd": "Livros",
-        "desc": "Obras fundamentais: 'Database System Concepts' (Silberschatz), 'SQL For Dummies' para iniciantes e 'MongoDB: The Definitive Guide' para especialistas."
+        "desc": "'Database System Concepts' (Silberschatz) - referência acadêmica. 'SQL For Dummies' - iniciantes. 'MongoDB: The Definitive Guide' - especialistas.",
+        "link": "https://www.oreilly.com/library/view/mongodb-the-definitive/9781491954454/"
       },
       {
         "cmd": "Comunidades",
-        "desc": "Participe de fóruns como Stack Overflow e grupos no Reddit para tirar dúvidas, compartilhar experiências e acompanhar tendências da área."
+        "desc": "Participe de fóruns como Stack Overflow, DBA StackExchange, Reddit (r/Database) e grupos de Telegram ou Discord para dúvidas e novidades.",
+        "link": "https://stackoverflow.com/questions/tagged/database"
       }
     ]
   }
